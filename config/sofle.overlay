@@ -1,8 +1,8 @@
-# Nice!Nano V2
+#include <dt-bindings/zmk/matrix_transform.h>
 
-# Device Tree Configuration for ext_power
-DT_NODE = ext_power {
-    compatible = "gpio-power-supply";
-    gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
-    power-gpio = <&gpio0 9>;
-};
+&{/zephyr,user {
+    ext_power {
+        compatible = "zmk,ext-power-generic";
+        control-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
+    };
+}};
