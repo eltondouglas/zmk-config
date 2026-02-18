@@ -15,8 +15,6 @@
 #define RAISE 2
 #define ADJUST 3
 
-/ {
-
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
@@ -51,6 +49,7 @@
     };
 };
 
+/ {
     chosen {
         zmk,underglow = &led_strip;
     };
