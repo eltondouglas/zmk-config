@@ -17,6 +17,9 @@
 
 / {
     // Activate ADJUST layer by pressing raise and lower
+    chosen {
+        zmk,underglow = &led_strip;
+    };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
